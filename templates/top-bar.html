@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>SomeGen-{% block title %}{% endblock %}</title>
-</head>
-<body>
-    <div>
-        {% block nav %}{% endblock %}
-    </div>
-    {% block content %}{% endblock %}
-</body>
-<style>
+    <head>
+        <meta charset="UTF-8">
+        <title>SomeGen-{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <top-bar class="nav">
+            <a href="{% url 'index' %}">SomeGen</a>
+            {% block nav %}{% endblock %}
+        </top-bar>
+        {% block content %}{% endblock %}
+    </body>
+    <script>
+        document.body.appendChild(document.createElement('top-bar'))
+    </script>
+    <style>
 
-</style>
-{% block outbody %}{% endblock %}
+    </style>
+    {% block outbody %}{% endblock %}
 </html>
