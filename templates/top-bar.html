@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SomeGen-{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div>
+        {% block nav %}{% endblock %}
+    </div>
+    {% block content %}{% endblock %}
+</body>
+<style>
+
+</style>
+{% block outbody %}{% endblock %}
+</html>
