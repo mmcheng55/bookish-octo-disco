@@ -13,6 +13,12 @@
     </body>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+        
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+
         .top-bar {
             background: rgb(31, 64, 148);
             overflow: hidden; 
@@ -30,6 +36,19 @@
         .top-bar a:hover {
             background-color: rgb(122, 180, 207);
             color: white;
+        }
+        .title {
+            background: gray;
+            margin: 0;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .description {
+            background: lightblue;
+            padding: 10px 20px;
+            line-height: 200%;
+            font-size: 19px;
         }
     </style>
     {% block outbody %}{% endblock %}

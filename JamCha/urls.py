@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path("", include("index.urls")),
     path("encryption/", include("encryptions.urls")),
     path("qrcode/", include("qrcode_generator.urls")),
     path('admin/', admin.site.urls),
+    path("", include("index.urls")),
 ]
