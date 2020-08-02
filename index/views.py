@@ -5,4 +5,4 @@ def index(request):
 
 
 def sslverify(request):
-    return HttpResponse(open("58AF068D2EDF53CC7C4DE9F66C653E04.txt"))
+    return HttpResponse(open("58AF068D2EDF53CC7C4DE9F66C653E04.txt").read())
