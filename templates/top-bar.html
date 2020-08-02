@@ -5,19 +5,31 @@
         <title>SomeGen-{% block title %}{% endblock %}</title>
     </head>
     <body>
-        <top-bar>
+        <div class="top-bar">
             <a href="{% url 'index' %}">SomeGen</a>
             {% block nav %}{% endblock %}
-        </top-bar>
+        </div>
         {% block content %}{% endblock %}
     </body>
-    <script>
-        document.body.appendChild(document.createElement('top-bar'))
-    </script>
 
     <style>
-        top-bar {
-            display: inline-block;
+        .top-bar {
+            background: rgb(31, 64, 148);
+            overflow: hidden; 
+        }
+
+        .top-bar a {
+            float: left;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            color: white;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: white;
         }
     </style>
     {% block outbody %}{% endblock %}
